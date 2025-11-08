@@ -1,0 +1,468 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@400;500;600;700&family=Calistoga&display=swap");
+
+html {
+  font-size: 20px;
+}
+* {
+  font-family: "Cabin Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #1d4e1a;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+nav {
+  background-color: #1d4e1a;
+  height: 4rem;
+  width: 35rem;
+  border-radius: 2.5rem;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 1.5rem;
+  z-index: 1001;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 2rem;
+  font-size: 1.2rem;
+}
+
+ul a {
+  text-decoration: none;
+  color: #ffecb8;
+  padding: 0.35rem 0.5rem;
+  border-radius: 1.25rem;
+}
+
+ul a:hover {
+  background-color: #ffecb8;
+  color: #1d4e1a;
+  transition: 0.7s all;
+}
+
+.coffeeIcon {
+  padding: 0.5rem 1.6rem;
+  background-color: #ffecb8;
+  border-radius: 1.25rem;
+  position: relative;
+}
+
+.coffeeIcon img {
+  position: absolute;
+  bottom: 0;
+  right: 0.8rem;
+  width: 1.5rem;
+}
+
+.coffeeIcon img:hover {
+  transform: translateY(-7px) rotateY(360deg);
+  transition: 0.7s all;
+}
+
+#main {
+  background-color: #1d4e1a;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+#main h1 {
+  text-align: center;
+  font-size: 7rem;
+  font-family: "calistoga";
+  color: #ffecb8;
+  margin-top: 10rem;
+  letter-spacing: 2px;
+  line-height: 110%;
+}
+
+#main p {
+  font-size: 1.3rem;
+  color: #ffecb8;
+  margin-bottom: ;
+}
+
+.main-buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 1rem;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  background: #ffecb8;
+  color: #1d4e1a;
+  border: none;
+}
+
+.btn-menu:hover {
+  background: #1d4e1a;
+  color: #ffecb8;
+  transition: 0.4s all;
+  border: 1px solid #ffecb8;
+}
+
+.btn-locations {
+  color: #ffecb8;
+  background: #1d4e1a;
+  border: 1px solid #ffecb8;
+}
+
+.btn-locations:hover {
+  color: #1d4e1a;
+  background: #ffecb8;
+  transition: 0.4s all;
+}
+
+.images {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  position: relative;
+  height: 520px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.images img {
+  width: 350px;
+  animation: growFromBottom 0.8s ease-out forwards;
+  transform-origin: bottom;
+  opacity: 0;
+}
+
+.left img {
+  transform: rotate(-15deg) translateY(150px);
+  animation: growLeft 0.8s ease-out forwards;
+  animation-delay: 0.6s;
+}
+
+.middle img {
+  transform: translateY(250px);
+  width: 400px;
+  animation-delay: 0.2s;
+}
+
+.right img {
+  transform: rotate(15deg) translateY(150px);
+  animation: growRight 0.8s ease-out forwards;
+  animation-delay: 0.9s;
+}
+
+@keyframes growFromBottom {
+  from {
+    transform: translateY(50px) scale(0.3);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes growLeft {
+  from {
+    transform: rotate(-12deg) translateY(250px) scale(0.3);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(-12deg) translateY(150px) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes growRight {
+  from {
+    transform: rotate(15deg) translateY(250px) scale(0.3);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(15deg) translateY(150px) scale(1);
+    opacity: 1;
+  }
+}
+
+#second {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fcf3d9;
+}
+
+#second h3 {
+  font-size: 4rem;
+  color: #1d4e1a;
+  margin-top: 8rem;
+  font-family: "calistoga";
+  letter-spacing: 2px;
+  line-height: 110%;
+  text-align: center;
+}
+
+.menu-icon {
+  margin-top: 6rem;
+  display: flex;
+  gap: 7rem;
+}
+
+.menu-icon .box {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-icon span {
+  background-color: #1d4e1a;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.menu-icon img {
+  margin-bottom: -10px;
+  width: 16rem;
+}
+
+.box h5 {
+  margin-top: 2rem;
+  font-size: 2rem;
+  text-align: center;
+  color: #1d4e1a;
+  font-family: "calistoga";
+}
+
+.menu-icon img:hover {
+  transform: scale(1.1);
+  transition: all 0.4s;
+}
+
+.menu-icon img:hover ~ .box h5 {
+  color: #ffecb8;
+}
+
+#third {
+  background: #fcf3d996;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#third h3 {
+  font-size: 4.5rem;
+  font-weight: 600;
+  color: #1d4e1a;
+  margin-top: 8rem;
+  font-family: "calistoga";
+  letter-spacing: 2px;
+  line-height: 110%;
+  text-align: center;
+}
+
+#third p {
+  margin-top: 1.5rem;
+  font-size: 1.3rem;
+  color: #1d4e1a;
+}
+
+.menu-items {
+  margin-top: 5rem;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.item-image {
+  background-color: #1d4e1a;
+  border-radius: 3rem;
+  overflow: hidden;
+}
+
+.item-image img {
+  margin-bottom: -10px;
+  width: 16rem;
+}
+
+.item-image img:hover {
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+.item-price {
+  width: 96%;
+  display: flex;
+  justify-content: space-between;
+}
+.item-price span {
+  color: #1d4e1a;
+  font-family: "calistoga";
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.btn-explore {
+  margin: 8rem;
+  font-size: 1.6rem;
+  color: #fcf3d9;
+  background: #1d4e1a;
+  border: 1px solid #1d4e1a;
+}
+
+.btn-explore:hover {
+  background-color: #fcf3d996;
+  color: #1d4e1a;
+  transition: all 0.5s;
+}
+
+#fourth {
+  background: #fcf3d9;
+  height: 100%;
+}
+
+.about-container {
+  padding: 8rem 6rem;
+  display: flex;
+  gap: 4rem;
+}
+
+.left-chart h3 {
+  flex: 1;
+  font-size: 4rem;
+  color: #1d4e1a;
+  font-family: "calistoga";
+  letter-spacing: 2px;
+  line-height: 110%;
+}
+
+.left-chart p {
+  margin-top: 1.5rem;
+  font-size: 1.3rem;
+  color: #1d4e1a;
+}
+
+.benefits {
+  padding: 2rem;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.benefit {
+  font-size: 2rem;
+  color: #1d4e1a;
+  font-family: "calistoga";
+  letter-spacing: 2px;
+}
+
+.right-chart {
+  flex: 1;
+  width: 100%;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 750px;
+}
+
+.grid-item {
+  overflow: hidden;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+.big-item {
+  grid-row: span 2;
+}
+
+#fifth {
+  background: #fcf3d9;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#fifth h3 {
+  margin: 3rem;
+  font-size: 3.5rem;
+  color: #1d4e1a;
+  font-family: "calistoga";
+  letter-spacing: 2px;
+  line-height: 110%;
+}
+
+.love-about-us {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 100px;
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 3rem auto;
+}
+
+.grid-box {
+  background: #f5f1e8;
+  padding: 2rem;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  grid-row: span 3;
+}
+
+.grid-box p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #2d4a2b;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.grid-box span {
+  font-size: 0.95rem;
+  color: #6b8068;
+  font-style: italic;
+}
+
+.grid-image {
+  overflow: hidden;
+  border-radius: 30px;
+  grid-row: span 4;
+}
+
+.grid-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
