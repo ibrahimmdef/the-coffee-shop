@@ -10,17 +10,17 @@
     <header>
       <nav>
         <ul>
-          <li><a href="#">Menu</a></li>
-          <li><a href="#">Locations</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="locations.html">Locations</a></li>
           <li>
-            <a href="#" class="coffeeIcon">
+            <a href="main.html" class="coffeeIcon">
               <img
                 src="https://cdn.prod.website-files.com/67fcb54501dc826cf4f8bfe9/67fccb954e77c661a593dbd5_Symbol.svg"
                 alt=""
               />
             </a>
           </li>
-          <li><a href="#">About Us</a></li>
+          <li><a href="">About Us</a></li>
           <li><a href="#">News</a></li>
         </ul>
       </nav>
@@ -30,8 +30,12 @@
       <h1>Life Begins <br />After Coffee</h1>
       <p>Because great coffee is the start of something even greater.</p>
       <div class="main-buttons">
-        <button class="btn btn-menu">Explore Menu</button>
-        <button class="btn btn-locations">Our Locations</button>
+        <a href="/menu.html">
+          <button class="btn btn-menu">Explore Menu</button></a
+        >
+        <a href="locations.html"
+          ><button class="btn btn-locations">Our Locations</button></a
+        >
       </div>
       <div class="images">
         <span class="left">
@@ -121,7 +125,9 @@
           </div>
         </div>
       </div>
-      <button class="btn btn-explore">Explore menu</button>
+      <a href="menu.html"
+        ><button class="btn btn-explore">Explore menu</button></a
+      >
     </section>
     <section id="fourth">
       <div class="about-container">
@@ -200,6 +206,71 @@
           </p>
           <span>Jordan T. – Iced latte addict</span>
         </div>
+      </div>
+      <a href="locations.html">
+        <button class="btn our-locations">Our Locations</button></a
+      >
+    </section>
+    <section id="sixth">
+      <h3>Nearby Cafés</h3>
+      <p>Find a Brewhaus nearby and stop in for your favorite drink.</p>
+      <div class="map-grid">
+        <div class="big-map"><img src="/public/assets/map.svg" /></div>
+        <div class="location">
+          <h6>Brooklyn</h6>
+          <h5>123 Bedford Ave, <br />Brooklyn, NY 11211</h5>
+          <h6>Open daily: 7AM – 7PM</h6>
+          <button class="btn get-directions">Get Directions</button>
+        </div>
+        <div class="location">
+          <h6>Queens</h6>
+          <h5>789 Broadway, <br />Queens, NY 11106</h5>
+          <h6>Open daily: 7AM – 8PM</h6>
+          <button class="btn get-directions">Get Directions</button>
+        </div>
+        <div class="location">
+          <h6>Manhattan</h6>
+          <h5>
+            456 Spring St,<br />
+            New York, NY 10012
+          </h5>
+          <h6>Open daily: 7AM – 6PM</h6>
+          <button class="btn get-directions">Get Directions</button>
+        </div>
+
+        <div class="location">
+          <h6>Queens</h6>
+          <h5>
+            134-16 36th Road,<br />
+            Flushing, NY 11354
+          </h5>
+          <h6>Open daily: 8AM – 6PM</h6>
+          <button class="btn get-directions">Get Directions</button>
+        </div>
+      </div>
+
+      <h4>Need Help?</h4>
+
+      <div class="contacts-container">
+        <a href="tel:+17185550243" class="contact">
+          <div class="label">General Inquiries</div>
+          <div class="text">+1 (212) 555-0198</div>
+        </a>
+
+        <a href="tel:+17185550243" class="contact">
+          <div class="label">Customer Support</div>
+          <div class="text">+1 (718) 555-0243</div>
+        </a>
+
+        <a href="mailto:example@gmail.com" class="contact">
+          <div class="label">General Email</div>
+          <div class="text">hello@gmail.com</div>
+        </a>
+
+        <a href="mailto:example@gmail.com" class="contact">
+          <div class="label">Support Email</div>
+          <div class="text">support@gmail.com</div>
+        </a>
       </div>
     </section>
     <script src="/public/js/index.js"></script>

@@ -105,7 +105,7 @@ ul a:hover {
 
 .btn {
   cursor: pointer;
-  padding: 10px 20px;
+  padding: 15px 20px;
   border-radius: 30px;
   font-size: 1.1rem;
   background: #ffecb8;
@@ -138,32 +138,33 @@ ul a:hover {
   justify-content: center;
   gap: 2.5rem;
   position: relative;
-  height: 520px;
+  height: 550px;
   width: 100%;
   overflow: hidden;
 }
 
 .images img {
-  width: 350px;
+  width: 380px;
   animation: growFromBottom 0.8s ease-out forwards;
   transform-origin: bottom;
   opacity: 0;
 }
 
 .left img {
-  transform: rotate(-15deg) translateY(150px);
+  transform: rotate(-10deg) translateY(150px);
   animation: growLeft 0.8s ease-out forwards;
   animation-delay: 0.6s;
 }
 
 .middle img {
+  margin-bottom: -570px;
   transform: translateY(250px);
   width: 400px;
   animation-delay: 0.2s;
 }
 
 .right img {
-  transform: rotate(15deg) translateY(150px);
+  transform: rotate(10deg) translateY(150px);
   animation: growRight 0.8s ease-out forwards;
   animation-delay: 0.9s;
 }
@@ -174,18 +175,18 @@ ul a:hover {
     opacity: 0;
   }
   to {
-    transform: translateY(0) scale(1);
+    transform: translateY(0) scale(1.1);
     opacity: 1;
   }
 }
 
 @keyframes growLeft {
   from {
-    transform: rotate(-12deg) translateY(250px) scale(0.3);
+    transform: rotate(-10deg) translateY(250px) scale(0.3);
     opacity: 0;
   }
   to {
-    transform: rotate(-12deg) translateY(150px) scale(1);
+    transform: rotate(-10deg) translateY(150px) scale(1);
     opacity: 1;
   }
 }
@@ -202,7 +203,7 @@ ul a:hover {
 }
 
 #second {
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -220,7 +221,7 @@ ul a:hover {
 }
 
 .menu-icon {
-  margin-top: 6rem;
+  margin: 6rem;
   display: flex;
   gap: 7rem;
 }
@@ -252,10 +253,6 @@ ul a:hover {
 .menu-icon img:hover {
   transform: scale(1.1);
   transition: all 0.4s;
-}
-
-.menu-icon img:hover ~ .box h5 {
-  color: #ffecb8;
 }
 
 #third {
@@ -347,8 +344,11 @@ ul a:hover {
   gap: 4rem;
 }
 
-.left-chart h3 {
+.left-chart {
   flex: 1;
+}
+
+.left-chart h3 {
   font-size: 4rem;
   color: #1d4e1a;
   font-family: "calistoga";
@@ -357,21 +357,21 @@ ul a:hover {
 }
 
 .left-chart p {
-  margin-top: 1.5rem;
+  margin-top: 1.8rem;
   font-size: 1.3rem;
   color: #1d4e1a;
 }
 
 .benefits {
-  padding: 2rem;
-  margin-top: 5rem;
+  padding: 1.7rem;
+  margin-top: 4rem;
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
 }
 
 .benefit {
-  font-size: 2rem;
+  font-size: 1.4rem;
   color: #1d4e1a;
   font-family: "calistoga";
   letter-spacing: 2px;
@@ -384,7 +384,7 @@ ul a:hover {
   gap: 1rem;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  height: 750px;
+  height: 700px;
 }
 
 .grid-item {
@@ -412,6 +412,7 @@ ul a:hover {
 }
 
 #fifth h3 {
+  text-align: center;
   margin: 3rem;
   font-size: 3.5rem;
   color: #1d4e1a;
@@ -423,7 +424,7 @@ ul a:hover {
 .love-about-us {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 100px;
+  grid-auto-rows: 80px;
   gap: 1.5rem;
   padding: 2rem;
   max-width: 1400px;
@@ -438,6 +439,7 @@ ul a:hover {
   flex-direction: column;
   justify-content: space-between;
   grid-row: span 3;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 0 0 1px;
 }
 
 .grid-box p {
@@ -445,7 +447,7 @@ ul a:hover {
   line-height: 1.6;
   color: #2d4a2b;
   font-weight: 600;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .grid-box span {
@@ -457,7 +459,7 @@ ul a:hover {
 .grid-image {
   overflow: hidden;
   border-radius: 30px;
-  grid-row: span 4;
+  grid-row: span 5;
 }
 
 .grid-image img {
@@ -465,4 +467,143 @@ ul a:hover {
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+.our-locations {
+  margin-bottom: 8rem;
+  background-color: #1d4e1a;
+  color: #ffecb8;
+  border: 1px solid #1d4e1a;
+}
+
+.our-locations:hover {
+  transform: scale(1.01);
+  color: #1d4e1a;
+  background: none;
+  transition: all 0.5s;
+}
+
+#sixth {
+  background: #1d4e1a;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#sixth h3 {
+  text-align: center;
+  margin-top: 9rem;
+  font-size: 4.2rem;
+  color: #ffecb8;
+  font-family: "calistoga";
+  letter-spacing: 2px;
+  line-height: 110%;
+}
+
+#sixth p {
+  margin-top: 0.8rem;
+  font-size: 1.1rem;
+  color: #ffecb8;
+}
+
+.map-grid {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr;
+  gap: 1.5rem;
+  max-width: 1400px;
+}
+
+.big-map img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 40px;
+}
+
+.big-map {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.location {
+  padding: 30px;
+  background: #fcf3d9;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.location h6 {
+  font-size: 0.8rem;
+}
+
+.location h5 {
+  font-size: 1rem;
+  font-family: "calistoga";
+}
+
+.get-directions {
+  font-size: 0.95rem;
+  width: 100%;
+  padding: 12px 10px;
+  background-color: #1d4e1a;
+  color: #fcf3d9;
+  border: 1px solid #1d4e1a;
+}
+
+.get-directions:hover {
+  background: none;
+  color: #1d4e1a;
+  transition: all 0.4s;
+}
+
+#sixth h4 {
+  text-align: center;
+  margin-top: 7rem;
+  font-size: 2.2rem;
+  color: #ffecb8;
+  font-family: "calistoga";
+  letter-spacing: 2px;
+  line-height: 110%;
+}
+
+.contacts-container {
+  display: flex;
+  max-width: 1400px;
+  width: 1400px;
+  gap: 20px;
+}
+
+.contact {
+  width: 100%;
+  margin: 4rem 0 8rem 0;
+  display: block;
+  text-decoration: none;
+  color: #ffecb8;
+  background-color: #275025a2;
+  padding: 25px 30px;
+  border-radius: 40px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 0 0 1px;
+}
+
+.label {
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.text {
+  font-size: 1.3rem;
+  font-family: "calistoga";
+  letter-spacing: 2px;
+}
+
+.contact:hover {
+  background-color: #3a6837a6;
+  transition: all 0.4s;
 }
