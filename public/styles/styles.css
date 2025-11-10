@@ -71,6 +71,96 @@ ul a:hover {
   transition: 0.7s all;
 }
 
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #ffecb8;
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  position: absolute;
+  left: 1rem;
+  z-index: 1002;
+}
+
+.close-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #ffecb8;
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  z-index: 1002;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    width: 90%;
+    height: auto;
+    flex-direction: column;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  nav.active ul {
+    opacity: 1;
+    max-height: 500px;
+    margin-top: 1rem;
+  }
+
+  nav.active .close-toggle {
+    display: block;
+  }
+
+  nav.active .menu-toggle {
+    display: none;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul a {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+  }
+
+  .coffeeIcon {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0.75rem 1.6rem;
+  }
+
+  .coffeeIcon img {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    margin-left: 0.5rem;
+  }
+}
+
 #main {
   background-color: #1d4e1a;
   height: 100%;
@@ -515,6 +605,7 @@ ul a:hover {
   grid-template-rows: 1fr 1fr;
   gap: 1.5rem;
   max-width: 1400px;
+  width: 100%;
 }
 
 .big-map img {
@@ -544,6 +635,7 @@ ul a:hover {
 }
 
 .location h5 {
+  width: 70%;
   font-size: 1rem;
   font-family: "calistoga";
 }
@@ -576,7 +668,7 @@ ul a:hover {
 .contacts-container {
   display: flex;
   max-width: 1400px;
-  width: 1400px;
+  width: 100%;
   gap: 20px;
 }
 
@@ -606,4 +698,285 @@ ul a:hover {
 .contact:hover {
   background-color: #3a6837a6;
   transition: all 0.4s;
+}
+@media (max-width: 1350px) {
+  html {
+    font-size: 18px;
+  }
+
+  .map-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1000px;
+    grid-auto-rows: 100px;
+  }
+  .big-map {
+    grid-column: span 2;
+    grid-row: span 4;
+  }
+  .location {
+    grid-column: span 1;
+    grid-row: span 2;
+  }
+
+  .menu-icon {
+    gap: 4rem;
+    margin: 4rem;
+  }
+  .menu-items {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .about-container {
+    flex-direction: column;
+    padding: 4rem 3rem;
+  }
+  .right-chart {
+    height: 500px;
+  }
+
+  .love-about-us {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 90%;
+  }
+
+  .contacts-container {
+    flex-direction: column;
+    max-width: 90%;
+    width: 90%;
+  }
+  .contact {
+    margin: 1rem 1.5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 18px;
+  }
+
+  .map-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 800px;
+    width: 90%;
+    grid-auto-rows: 120px;
+  }
+  .big-map {
+    grid-column: span 2;
+    grid-row: span 5;
+  }
+
+  .location {
+    grid-row: span 2;
+  }
+
+  .menu-icon {
+    gap: 4rem;
+    margin: 4rem;
+  }
+  .menu-items {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .about-container {
+    flex-direction: column;
+    padding: 4rem 3rem;
+  }
+  .right-chart {
+    height: 500px;
+  }
+
+  .love-about-us {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 90%;
+  }
+
+  .contacts-container {
+    flex-direction: column;
+    max-width: 90%;
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+
+  #main h1,
+  .main h3,
+  #second h3,
+  #third h3,
+  #sixth h3 {
+    font-size: 2.5rem;
+    margin-top: 6rem;
+  }
+
+  #main p,
+  .main p,
+  #third p,
+  #sixth p {
+    font-size: 1rem;
+  }
+
+  .images {
+    flex-direction: column;
+    height: auto;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .left img,
+  .middle img {
+    display: none;
+  }
+  .right img {
+    transition: all 0.6s;
+    width: 280px;
+    transform: translateY(350px);
+    animation: growFromBottom 0.6s ease-out forwards;
+    animation-delay: 0.6s;
+    opacity: 1;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .menu-icon {
+    flex-direction: column;
+    gap: 3rem;
+    margin: 3rem;
+  }
+
+  .menu-icon img,
+  .item-image img {
+    width: 12rem;
+  }
+
+  .menu-items {
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .about-container {
+    padding: 3rem 1.5rem;
+    gap: 2rem;
+  }
+  .left-chart h3 {
+    font-size: 2.5rem;
+  }
+  .left-chart p {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+  }
+  .benefits {
+    margin-top: 2rem;
+  }
+  .right-chart {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  .big-item {
+    grid-row: span 1;
+  }
+
+  .love-about-us {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 120px;
+    padding: 1rem;
+    margin: 2rem auto;
+  }
+  .grid-box {
+    grid-row: span 2;
+  }
+  .grid-image {
+    grid-row: span 3;
+  }
+
+  .seperator {
+    grid-row: 2/5;
+  }
+
+  .map-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 3rem;
+    padding: 0 1rem;
+  }
+  .big-map {
+    grid-column: span 1;
+    grid-row: span 4;
+  }
+
+  .location {
+    grid-row: span 2;
+  }
+
+  .location h6 {
+    font-size: 0.75rem;
+  }
+  .location h5 {
+    width: 100%;
+    font-size: 0.95rem;
+  }
+
+  .btn,
+  .btn-explore {
+    font-size: 1rem;
+    padding: 12px 16px;
+  }
+  .main-buttons {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 1.5rem;
+  }
+
+  #sixth h4,
+  #fourth h3 {
+    font-size: 1.8rem;
+    margin-top: 4rem;
+  }
+
+  .contact {
+    margin: 1rem;
+    padding: 20px;
+  }
+}
+
+/* Small Mobile - up to 480px */
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+
+  nav {
+    width: 95%;
+    padding: 1.4rem;
+  }
+
+  #main h1,
+  .main h3,
+  #second h3,
+  #third h3,
+  #sixth h3 {
+    font-size: 3rem;
+  }
+
+  .left img,
+  .middle img,
+  .right img {
+    width: 220px;
+  }
+
+  .menu-icon img,
+  .item-image img {
+    width: 12.5rem;
+  }
+
+  .item-price span {
+    font-size: 1.2rem;
+  }
+  .contact {
+    margin: 1.2rem;
+  }
 }

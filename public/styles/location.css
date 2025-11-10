@@ -1,0 +1,441 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@400;500;600;700&family=Calistoga&display=swap");
+
+html {
+  font-size: 20px;
+}
+* {
+  font-family: "Cabin Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #1d4e1a;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+nav {
+  background-color: #1d4e1a;
+  height: 4rem;
+  width: 35rem;
+  border-radius: 2.5rem;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 1.5rem;
+  z-index: 1001;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 2rem;
+  font-size: 1.2rem;
+}
+
+ul a {
+  text-decoration: none;
+  color: #ffecb8;
+  padding: 0.35rem 0.5rem;
+  border-radius: 1.25rem;
+}
+
+ul a:hover {
+  background-color: #ffecb8;
+  color: #1d4e1a;
+  transition: 0.7s all;
+}
+
+.coffeeIcon {
+  padding: 0.5rem 1.6rem;
+  background-color: #ffecb8;
+  border-radius: 1.25rem;
+  position: relative;
+}
+
+.coffeeIcon img {
+  position: absolute;
+  bottom: 0;
+  right: 0.8rem;
+  width: 1.5rem;
+}
+
+.coffeeIcon img:hover {
+  transform: translateY(-7px) rotateY(360deg);
+  transition: 0.7s all;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #ffecb8;
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  position: absolute;
+  left: 1rem;
+  z-index: 1002;
+}
+
+.close-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #ffecb8;
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  z-index: 1002;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    width: 90%;
+    height: auto;
+    flex-direction: column;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  nav.active ul {
+    opacity: 1;
+    max-height: 500px;
+    margin-top: 1rem;
+  }
+
+  nav.active .close-toggle {
+    display: block;
+  }
+
+  nav.active .menu-toggle {
+    display: none;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul a {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+  }
+
+  .coffeeIcon {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0.75rem 1.6rem;
+  }
+
+  .coffeeIcon img {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    margin-left: 0.5rem;
+  }
+}
+
+.main {
+  background: #1d4e1a;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main h3 {
+  text-align: center;
+  margin-top: 9rem;
+  font-size: 4.2rem;
+  color: #ffecb8;
+  font-family: "calistoga";
+  letter-spacing: 2px;
+  line-height: 110%;
+}
+
+.main p {
+  margin-top: 0.8rem;
+  font-size: 1.1rem;
+  color: #ffecb8;
+}
+
+.map-grid {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr;
+  gap: 1.5rem;
+  max-width: 1400px;
+  width: 100%;
+}
+
+.big-map img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 40px;
+}
+
+.big-map {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.location {
+  padding: 30px;
+  background: #fcf3d9;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.location h6 {
+  font-size: 0.8rem;
+}
+
+.location h5 {
+  width: 70%;
+  font-size: 1rem;
+  font-family: "calistoga";
+}
+
+.get-directions {
+  font-size: 0.95rem;
+  width: 100%;
+  padding: 12px 10px;
+  background-color: #1d4e1a;
+  color: #fcf3d9;
+  border: 1px solid #1d4e1a;
+  border-radius: 20px;
+}
+
+.get-directions:hover {
+  background: none;
+  color: #1d4e1a;
+  transition: all 0.4s;
+}
+
+.main h4 {
+  text-align: center;
+  margin-top: 7rem;
+  font-size: 2.2rem;
+  color: #ffecb8;
+  font-family: "calistoga";
+  letter-spacing: 2px;
+  line-height: 110%;
+}
+
+.contacts-container {
+  display: flex;
+  max-width: 1400px;
+  width: 100%;
+  gap: 20px;
+}
+
+.contact {
+  width: 100%;
+  margin: 4rem 0 8rem 0;
+  display: block;
+  text-decoration: none;
+  color: #ffecb8;
+  background-color: #275025a2;
+  padding: 25px 30px;
+  border-radius: 40px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 0 0 1px;
+}
+
+.label {
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.text {
+  font-size: 1.3rem;
+  font-family: "calistoga";
+  letter-spacing: 2px;
+}
+
+.contact:hover {
+  background-color: #3a6837c7;
+  transition: all 0.4s;
+}
+
+/* Tablet - 768px to 1024px */
+@media (max-width: 1024px) {
+  html {
+    font-size: 18px;
+  }
+
+  .map-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 90%;
+    padding: 0 2rem;
+  }
+
+  .big-map {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  .contacts-container {
+    flex-direction: column;
+    max-width: 90%;
+    width: 90%;
+  }
+
+  .main h3 {
+    font-size: 3.5rem;
+  }
+  .main h4 {
+    font-size: 2rem;
+  }
+}
+
+/* Mobile - up to 768px */
+@media (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+
+  .main h3 {
+    font-size: 2.5rem;
+    margin-top: 7rem;
+    padding: 0 1rem;
+  }
+
+  .main p {
+    font-size: 1rem;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .map-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 3rem;
+    padding: 0 1rem;
+  }
+
+  .big-map {
+    grid-column: span 1;
+    grid-row: span 2;
+  }
+
+  .location {
+    grid-row: span 1;
+    padding: 20px;
+  }
+
+  .location h6 {
+    font-size: 0.75rem;
+  }
+  .location h5 {
+    width: 100%;
+    font-size: 0.95rem;
+  }
+
+  .get-directions {
+    font-size: 0.9rem;
+    padding: 10px;
+    border-radius: 15px;
+  }
+
+  .main h4 {
+    font-size: 1.8rem;
+    margin-top: 5rem;
+    padding: 0 1rem;
+  }
+
+  .contacts-container {
+    flex-direction: column;
+    max-width: 90%;
+    width: 90%;
+    gap: 15px;
+  }
+
+  .contact {
+    margin: 2rem 0 4rem 0;
+    padding: 20px 25px;
+    border-radius: 30px;
+  }
+
+  .label {
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+  }
+
+  .text {
+    font-size: 1.1rem;
+  }
+}
+
+/* Small Mobile - up to 480px */
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+
+  nav {
+    width: 90%;
+    padding: 1.4rem;
+  }
+
+  .main h3 {
+    font-size: 2rem;
+    margin-top: 6rem;
+  }
+
+  .main h4 {
+    font-size: 1.5rem;
+    margin-top: 4rem;
+  }
+
+  .map-grid {
+    margin-top: 2rem;
+    gap: 1.3rem;
+  }
+
+  .location {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .contact {
+    margin: 1rem 0;
+    padding: 18px 20px;
+    border-radius: 25px;
+  }
+
+  .text {
+    font-size: 1rem;
+  }
+}
